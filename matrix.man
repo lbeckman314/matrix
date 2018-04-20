@@ -1,0 +1,73 @@
+'\" t
+.\"     Title: matrix
+.\"    Author: liam beckman
+.\" Generator: Pandoc <http://pandoc.org/>
+.\"      Date: 2018-04-20
+.\"    Manual: Matrix
+.\"    Source: Matrix 0.0.1
+.\"  Language: English
+.\"
+.TH "MATRIX" "2018-04-20" "Matrix 0\&.0\&.1" "Matrix Manual"
+
+.PP
+\f[B]NAME\f[]
+.RS 4
+    matrix - the stupid matrix calculator
+.RE
+
+.PP
+\f[B]SYNOPSIS\f[]
+.RS 4
+    matrix [--options] [<args>]
+.RE
+
+.PP
+\f[B]DESCRIPTION\f[]
+.RS 4
+    matrix is a simple bash script used to add, average,
+multiply and transpose matrices.
+.RE
+
+.PP
+\f[B]OPTIONS\f[]
+.RS 4
+--fancy
+.RS 4
+prints a fancy message at the end.
+.RE
+.RE
+
+.PP
+\f[B]COMMANDS\f[]
+.RS 4
+\f[B]add\f[]
+.RS 4
+takes two matrices of dimensions (Y by Z) and (Y by Z) and produces a sum matrix of dimesions (Y by Z)
+.RE
+
+.PP
+\f[B]average\f[]
+.RS 4
+takes one matrix of dimension (Y by X) and averages each of it's columns. Produces an average matrix of dimensions (1 by X)
+.RE
+
+.PP
+\f[B]multiply\f[]
+.RS 4
+takes two matrices of dimensions (Y1 by X1) and (Y2 by X2) and produces a sum matrix of dimesions (X1 by Y2). X1 must be eqaul to Y2.
+.RE
+
+.PP
+\f[B]transpose\f[]
+.RS 4
+takes one matrix and moves element at position (Y by X) to position (X by Y).
+.RE
+
+.RE
+.PP
+\f[B]REPORTING BUGS\f[]
+    lbeckman314\@gmail.com
+
+.PP
+\f[B]NOTES\f[]
+    1) online documentation at https://liambeckman.com/code/matrix
