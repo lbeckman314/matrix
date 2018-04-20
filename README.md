@@ -77,8 +77,6 @@ g++ matrix/src/matrix.cpp -o matrix/src/matrix
 
 # Uninstallation
 
-<br />
-
 <h2 class="code">1. Delete the directory/folder.</h2>
 
 ```shell
