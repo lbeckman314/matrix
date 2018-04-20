@@ -1,0 +1,23 @@
+#!/bin/bash
+
+nonempty=0
+brackets=0
+empty=0
+while read line
+do
+    if [ -z "$line" ]
+    then
+        ((empty++))
+
+    elif [ "$line" == "{" ] || [ "$line" == "}" ]
+    then
+        ((brackets++))
+    
+    elif [ -n "$line" ]
+    then
+        ((nonempty++))
+    fi
+
+done < $1
+
+echo "non-blank lines: $nonempty"
