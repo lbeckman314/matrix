@@ -1,11 +1,12 @@
 #!/bin/bash
 # author: liam beckman
 # created: 2018-04-03
-# updated: 2018-04-13
+# updated: 2018-04-23
 # sources:
 #   https://stackoverflow.com/questions/192249/how-do-i-parse-command-line-arguments-in-bash
 #   p1gradingscript, Written by Ryan Gambord (gambordr@oregonstate.edu)
 #   https://stackoverflow.com/questions/8550385/how-to-read-1-line-from-2-files-sequentially
+#   https://www.poetryfoundation.org/poems/142199/lines-of-force
 
 # control-c will terminate script execution and remove temporary files
 trap "echo; echo 'SIGINT received: Deleting temp files then exiting!'; clean; exit 1" INT
@@ -328,9 +329,7 @@ multiply()
     do
         for element in $line
         do
-            #echo "element: $element"
             arr2+=($element)
-            #echo arr2
         done
     done < $1
 
@@ -414,11 +413,6 @@ multiply()
 
     done < $1
 
-
-    # remove temporary files
-    #rm -f multiplyLeft$$.temp
-    #rm -f multiplyRight$$.temp
-
 runtime=$((end-start))
 echo $runtime > timeMultiply.temp
 
@@ -431,23 +425,18 @@ clean()
     rm -f addLeft$$.temp
     rm -f addRight$$.temp
 
-    #rm -f dims$$.temp
     rm -f dims*.temp
 
     rm -f mean$$.temp
 
-    #rm -f multiplyLeft$$.temp
-    #rm -f multiplyRight$$.temp
     rm -f multiplyLeft*.temp
     rm -f multiplyRight*.temp
 
     rm -f stdinLeft$$.temp
     rm -f stdinRight$$.temp
 
-    #rm -f transpose$$.temp
     rm -f transpose*.temp
 
-    #rm -f validate$$.temp
     rm -f validate*.temp
 
 }
@@ -561,3 +550,48 @@ main()
 
 # call main function with all arguments
 main $@
+
+
+# ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~
+# P O E T R Y  of the  M O N T H
+# ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~
+#
+# Lines of Force
+# By Thomas Centolella
+#
+# ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~
+#
+# The pleasure of walking a long time on the mountain
+# without seeing a human being, much less speaking to one.
+#
+# And the pleasure of speaking when one is suddenly there.
+# The upgrade from wary to tolerant to convivial,
+# so unlike two brisk bodies on a busy street
+# for whom a sudden magnetic attraction
+# is a mistake, awkwardness, something to be sorry for.
+#
+# But to loiter, however briefly, in a clearing
+# where two paths intersect in the matrix of chance.
+# To stop here speaking the few words that come to mind.
+# A greeting. Some earnest talk of weather.
+# A little history of the day.
+#
+# To stand there then and say nothing.
+# To slowly look around past each other.
+# Notice the green tang pines exude in the heat
+# and the denser sweat of human effort.
+#
+# To have nothing left to say
+# but not wanting just yet to move on.
+# The tension between you, a gossamer thread.
+# It trembles in the breeze, holding
+# the thin light it transmits.
+#
+# To be held in that
+# line of force, however briefly,
+# as if it were all that mattered.
+#
+# And then to move on.
+# With equal energy, with equal pleasure.
+#
+# ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~
