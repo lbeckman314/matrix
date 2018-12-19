@@ -1,4 +1,4 @@
-![matrix](matrix.png)
+![matriz](matriz.png)
 
 This program adds, multiplies, transposes, and averages matrices!  in action [here](https://asciinema.org/a/zjRyykwFxzX8SYoXAMemrWPk8).
 
@@ -25,16 +25,16 @@ The above utilities should be installed (or readily available) if you are runnin
 
 ```shell
 # clone the git repo
-git clone https://git.liambeckman.com/cgit/matrix
+git clone https://git.liambeckman.com/cgit/matriz
 
 # enter directory
-cd matrix
+cd matriz
 
 # allow the script to execute
-chmod u+x matrix
+chmod u+x matriz.sh
 
 # run the script
-./matrix add m1 m1
+./matriz.sh add m1 m1
 ```
 
 <br />
@@ -45,7 +45,7 @@ chmod u+x matrix
 <h2 class="code">0. Delete the directory/folder.</h2>
 
 ```shell
-rm -rfI matrix
+rm -rfI matriz
 ```
 
 <br />
@@ -53,15 +53,15 @@ rm -rfI matrix
 
 # Documentation
 
-(Run `man -l matrix.man` while in the directory for a basic man page for `matrix`.)
+(Run `man -l matriz.man` while in the directory for a basic man page for `matriz`.)
 
-`matrix` takes four arguments: **add**, **average**, **multiply**, and **transpose**. Matrix input (either with files or standard input) must be integers, either positive or negative, separated by white space. Non-numeric characters (including blank elements) will throw an error. Output will be tab-delimited elements.
+`matriz` takes four arguments: **add**, **average**, **multiply**, and **transpose**. matriz input (either with files or standard input) must be integers, either positive or negative, separated by white space. Non-numeric characters (including blank elements) will throw an error. Output will be tab-delimited elements.
 
 <br />
 <br />
 
 **add**
-    takes two matrices of dimensions `row × col` and `row × col` and produces a sum matrix of dimesions `row × col`. To add two matrices, run `./matrix add m1 m2` where `m1` and `m2` are matrix files.
+    takes two matrices of dimensions `row × col` and `row × col` and produces a sum matriz of dimesions `row × col`. To add two matrices, run `./matriz.sh add m1 m2` where `m1` and `m2` are matriz files.
 
 
 ```sh
@@ -69,7 +69,7 @@ $ cat mI1
 1   2   3   4
 5   6   7   8
 
-$ ./matrix add m1 m1
+$ ./matriz.sh add m1 m1
 2	4	6	8
 10	12	14	16
 ```
@@ -78,14 +78,14 @@ $ ./matrix add m1 m1
 <br />
 
 **mean**
-    takes one matrix of dimension `row × col` and averages each of it's columns. Produces an average matrix of dimensions `1 × col`. To add two matrices, run `./matrix transpose m1 ` where `m1` is a matrix file.
+    takes one matriz of dimension `row × col` and averages each of it's columns. Produces an average matriz of dimensions `1 × col`. To add two matrices, run `./matriz.sh transpose m1 ` where `m1` is a matriz file.
 
 ```sh
 $ cat m1
 1   2   3   4
 5   6   7   8
 
-$ ./matrix mean m1
+$ ./matriz.sh mean m1
 3	4	5	6
 ```
 
@@ -93,7 +93,7 @@ $ ./matrix mean m1
 <br />
 
 **multiply**
-    takes two matrices of dimensions `row₁ × col₁` and `row₂ × col₂` and produces a sum matrix of dimesions `row₁ × col₂`. col₁ must be eqaul to row₂. To add two matrices, run `./matrix multiply m1 m2` where `m1` and `m2` are matrix files.
+    takes two matrices of dimensions `row₁ × col₁` and `row₂ × col₂` and produces a sum matriz of dimesions `row₁ × col₂`. col₁ must be eqaul to row₂. To add two matrices, run `./matriz.sh multiply m1 m2` where `m1` and `m2` are matriz files.
 
 ```sh
 $ cat m1
@@ -106,7 +106,7 @@ $ cat m2
 3	7
 4	8
 
-$ ./matrix multiply m1 m2
+$ ./matriz.sh multiply m1 m2
 30	70
 70	174
 ```
@@ -115,14 +115,14 @@ $ ./matrix multiply m1 m2
 <br />
 
 **transpose**
-    takes one matrix and moves element at position `row × col` to position `col × row`. To add two matrices, run `./matrix transpose m1` where `m1` is a matrix file.
+    takes one matriz and moves element at position `row × col` to position `col × row`. To add two matrices, run `./matriz.sh transpose m1` where `m1` is a matriz file.
 
 ```sh
 $ cat m1
 1   2   3   4
 5   6   7   8
 
-$ ./matrix transpose m1
+$ ./matriz.sh transpose m1
 1	5
 2	6
 3	7
@@ -215,10 +215,10 @@ Click the tar.gz or zip buttons at the top of the page to download a tar.gz or .
 Or copy and paste the following command into the terminal to have it download it for you!
 
 ```shell
-wget http://www.liambeckman.com/pkgs/matrix/matrix.tar.gz
+wget http://www.liambeckman.com/pkgs/matriz/matriz.tar.gz
 
 # or if you prefer curl:
-# curl http://www.liambeckman.com/pkgs/matrix/matrix.tar.gz -o matrix.tar.gz
+# curl http://www.liambeckman.com/pkgs/matriz/matriz.tar.gz -o matriz.tar.gz
 ```
 
 
@@ -235,9 +235,9 @@ gpg --keyserver pgp.mit.edu --recv-keys AC1CC079
 # RECIEVE SHA256SUMS
 #-------------------------------#
 
-wget http://www.liambeckman.com/pkgs/matrix/sha256sums.txt{,.asc}
+wget http://www.liambeckman.com/pkgs/matriz/sha256sums.txt{,.asc}
 # or if you prefer curl:
-# curl http://www.liambeckman.com/pkgs/matrix/sha256sums.txt{,.asc} -o sha256sums.txt -o sha256sums.txt.asc
+# curl http://www.liambeckman.com/pkgs/matriz/sha256sums.txt{,.asc} -o sha256sums.txt -o sha256sums.txt.asc
 
 #-------------------------------#
 # VERIFY SHA256SUMS
@@ -254,8 +254,8 @@ gpg --verify sha256sums.txt.asc
 
 sha256sum -c sha256sums.txt
 
-# matrix.tar.gz: OK
-# matrix.zip: OK
+# matriz.tar.gz: OK
+# matriz.zip: OK
 
 #-------------------------------#
 # OPTIONALLY REMOVE PUBLIC KEY
@@ -270,9 +270,9 @@ gpg --delete-key AC1CC079
 
 
 ```shell
-tar -zxvf matrix.tar.gz
+tar -zxvf matriz.tar.gz
 # or if you downloaded the zip file
-# unzip matrix.zip
+# unzip matriz.zip
 ```
 
 
@@ -280,10 +280,10 @@ tar -zxvf matrix.tar.gz
 
 
 ```shell
-cd matrix
+cd matriz
 
-chmod u+x matrix
-./matrix add m1 m1
+chmod u+x matriz
+./matriz add m1 m1
 ```
 
 <br />
@@ -294,5 +294,5 @@ chmod u+x matrix
 <h2 class="code">0. Delete the directory/folder.</h2>
 
 ```shell
-rm -rfI matrix
+rm -rfI matriz
 ```
