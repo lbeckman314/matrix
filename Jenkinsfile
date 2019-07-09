@@ -1,5 +1,5 @@
 PROJECT = "matriz"
-PRODUCTION = "/var/www/pkgs/${PROJECT}"
+PRODUCTION = "/var/www/pkgs/matriz"
 DEMO = "/var/www/demo/programs"
 OUT = "matriz.sh"
 
