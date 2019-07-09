@@ -7,7 +7,7 @@ demo=/var/www/demo/programs
 src=/var/www/pkgs/$project/src
 obj=matriz.sh
 
-cd $pkgs
+pwd
 git pull origin master
 
 echo "move compressed files and sha/gpg signatures to packages directory"
